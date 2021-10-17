@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>CBIR</title>
+        <style>
+            .container
+            {
+                position: relative;
+            }
+            h1
+            {
+                position:relative;
+                left:0;
+                right:0;
+                top:0;
+                margin-left: -8px;
+                margin-top: -8px;
+                margin-right: -10px;
+                font: calibri;
+                padding: 10px 10px 10px 8px;
+                height: 40px;
+                display: block;
+                background-color: dodgerblue;
+                color: aliceblue;
+            }
+            .img-container::after
+            {
+                content: "";
+                display: block; 
+                clear: both;
+            }
+
+            .images
+            {
+                float:left;
+                width: 250px;
+                height: 175px;
+                margin: 10px 10px 15px 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Content Based Image Retrieval Engine</h1>
+            <div class = "img-container">
+            {% for img in files %}
+                <!-- <img src = {{img_path}} class="images"> -->
+                <img src="{{ url_for('static', filename = img) }}" class="images">
+            {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

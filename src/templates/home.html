@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>CBIR</title>
+        <style>
+            .container
+            {
+                position: relative;
+            }
+            h1
+            {
+                position:relative;
+                left:0;
+                right:0;
+                top:0;
+                margin-left: -8px;
+                margin-top: -8px;
+                margin-right: -10px;
+                font: calibri;
+                padding: 10px 10px 10px 8px;
+                height: 40px;
+                display: block;
+                background-color: dodgerblue;
+                color: aliceblue;
+            }
+            form
+            {
+                position: relative;
+                left: 500;
+                top: 300;
+
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+        <h1>Content Based Image Retrieval Engine</h1>
+        <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" style="width:200px"/>
+         <input type = "submit" style="height: 50px; width: 100px; left: 250; top: 250;"/>
+        </form>
+        </div>
+    </body>
+</html>
